@@ -21,17 +21,21 @@ $(function () {
     console.log(text);
     textId = $(this).parent().attr('id'); // this gets the html text id relative to the save button that was clicked on
     localStorage.setItem(textId, text);
-    var newText = localStorage.getItem(textId);
-    console.log(textId);
     // timeBlockEl.children().eq(textId).text(newText);
   })
+
+  timeBlockEl.each(function() { // the .each method selects all the time-block class elements and iterates through each of them
+    var textId = $(this).attr('id');
+    var savedText = localStorage.getItem(textId);
+    $(this).children('.description').val(savedText);
+  });
 
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  today = dayjs();
+  today = dayjs().format('MMMM D, YYYY');
   todayHours = dayjs().format('H');
   var headerContainer = $('header');
   var pEl = $('<p>');
@@ -53,8 +57,8 @@ $(function () {
       containerEl.children().eq(i).addClass("present")
     }
     console.log(timeBlockNumbers) // prints the number of each element
+    console.log(timeBlockIds)
   }
-
 
 
 
