@@ -25,7 +25,7 @@ $(function () {
   pEl.addClass('lead')
   pEl.text(today);
   headerContainer.append(pEl);
-  
+
   // this for loop adds the hour number into the hoursArray array
   for (i = 0; i < containerEl.children().length; i++){
     timeBlockIds = containerEl.children().eq(i).attr('id')
