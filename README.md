@@ -6,4 +6,4 @@ This is a 9-5 workday scheduler! It will tell you the date and give you informat
 ## Visit The Site!
 You can visit the deployed website here: https://shimmyshong.github.io/work-day-scheduler/
 
-![screenshot of quiz website](assets\images\chrome_5TCAbig3BH.png)
+![screenshot of workday scheduler website](assets/images/chrome_5TCAbig3BH.png)
